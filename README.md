@@ -34,8 +34,12 @@ $ ssh your_asc_account@@dmc.asc.edu
 ```  
 **Before** you loged in, copy and paste from local to ASC
 ```  
-$ scp your_local_path_of_files your_asc_account@@dmc.asc.edu:~/path_of_the_directory_you_want_to_paste_into
+$ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_directory_you_want_to_paste_into
 ```
+Once you login, **submit** jobs to ASC to run your scripts
+# Functions
+
+
 ## Box Folder
 
 Here is the link to the Box Folder with our data: https://auburn.box.com/s/x17154cah63h3yp4wd14ak6p0fa3t5jz
