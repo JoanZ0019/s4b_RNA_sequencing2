@@ -44,6 +44,31 @@ Once you login, **submit** jobs to ASC to run your scripts
 |---|---|---|---|
 
 ### Description
+`quality_check` 
+### Usage
+
+Running the `quality_check` function requires an input path, output path, and a minimum size argument. There are also three optional arguments which can be found in the table below.
+
+```
+$ snpbinner crosspoints --input PATH --output PATH (--min-length INT | --min-ratio FLOAT) [optional args]  
+``` 
+### Input Format
+**[Sample input file](sample_files/crosspoints_in.fastq.gz)**
+
+|   |Input should be formatted as a tab‑separated value (TSV) file with the following columns.|
+|---|---|
+|0|The SNP marker ID.|
+|1|The position of the marker in base pairs from the start of the chromosome.|
+|2+|RIL ID (header) and the called genotype of the RIL at each position.|
+
+### Output Format
+**[Sample output file](sample_files/crosspoints_out.tsv)**
+
+|   |Output is formatted as a comma‑separated value (CSV) file with the following columns.|
+|---|---|
+|0|The RIL ID|
+|Odd|Location of a crosspoint. (Empty after the chromosome ends.)|
+|Even|Genotype in between the surrounding crosspoints. (Empty after the chromosome ends.)|
 
 ## Box Folder
 
