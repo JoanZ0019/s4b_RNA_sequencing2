@@ -39,7 +39,7 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 Once you login, **submit** jobs to ASC to run your scripts
 
 # Steps and functions
-## 1.quality_check
+## 1. quality_check
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
 
