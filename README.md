@@ -42,7 +42,7 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 $ chmod +x my_scripts
 $ run_script my_scripts
 ``` 
-# - **Download** files from ASC to local (need to exit ASC)
+- **Download** files from ASC to local (need to exit ASC)
 ```  
 $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
 ```
@@ -72,7 +72,8 @@ $ quality_check /home/asc_account/path_to_your_folder
 ### Output Format
 **[Sample output file](sample_files/4040-KH-17.4040-KH-14_0_filtered_R1_fastqc.html)**
 
-|   |Output is  a `.html` file with the following columns. It can be [downloaded](#download) from ASC to local and viewed in a web browser. |
+|   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and [viewed](file:///Users/qiongzhang/s4b_RNA_sequencing2/RNASeq_Data/FastQC/4040-KH-17.4040-KH-17_0_filtered_R1_fastqc.html)
+in a web browser. |
 |---|---|
 
 
