@@ -19,17 +19,11 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
 [**Environment and Usage**](#environment-and-usage)  
 [**Steps and functions**](#steps-and-functions)  
   1. Check the quality of the reads using function: [quality_check](#quality-check)
+  2. Clean reads using function: [trim_read](#trim-read)  
+  3. Check the quality of the trimmed reads using function: [qc_trimmed](#qc_trimmed)
+  4. Mapping the genome using function: [mapping](#mapping)
    
-  2. [trim_read](#reads-clean)  
-    [Genome index](#genome-index) 
-    [Reads mapping](#reads-mapping)
-    [Reads counts](#reads-counts)
-#
-	#Clean reads
-	#Index the genome
-	#Map the reads to a reference genome
-	#Get read counts per gene
-	#Use the read counts to find differentially expressed genes (DEGs)
+
 # Environment and Usage
 _**RNS_Sequencing requires Alabama Super Computer**. You can request an new or existing account from [ASC](https://www.asc.edu/hpc/ASA-HPC-Annual-Grant-Request-Form). Highly recommand to email them if you need to contact them._
 
@@ -45,7 +39,7 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 Once you login, **submit** jobs to ASC to run your scripts
 
 # Steps and functions
-## crosspoints
+## 1.quality_check
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
 
