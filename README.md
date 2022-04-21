@@ -75,7 +75,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 |   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and [viewed](file:///Users/qiongzhang/s4b_RNA_sequencing2/RNASeq_Data/FastQC/4040-KH-17.4040-KH-17_0_filtered_R1_fastqc.html)
 in a web browser. |
 |---|---|
-
+![](README_images/)
 
 ## Box Folder
 
