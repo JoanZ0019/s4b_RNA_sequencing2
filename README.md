@@ -60,7 +60,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 ### Input Format
 **[Sample input file](sample_files/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
 
-|   |Input should be formatted as a compressed fastq file showing as `.fast.gz`.|
+|   |Input should be formatted as a compressed fastq file showing as `.fastq.gz`.|
 |---|---|
 |0|Unique read ID.|
 |1|The sequence.|
@@ -69,11 +69,9 @@ $ quality_check /home/asc_account/path_to_your_folder
 ### Output Format
 **[Sample output file](sample_files/4040-KH-17.4040-KH-14_0_filtered_R1_fastqc.html)**
 
-|   |Output is  a .html file with the following columns. It can be viewed in a web browser. |
+|   |Output is  a `.html` file with the following columns. It can be viewed in a web browser. |
 |---|---|
-|0|The RIL ID|
-|Odd|Location of a crosspoint. (Empty after the chromosome ends.)|
-|Even|Genotype in between the surrounding crosspoints. (Empty after the chromosome ends.)|
+
 
 ## Box Folder
 
