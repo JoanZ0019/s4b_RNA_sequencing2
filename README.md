@@ -42,7 +42,10 @@ Once you login, **submit** jobs to ASC to run your scripts
 $ chmod +x my_scripts
 $ run_script my_scripts
 ``` 
-
+**Download** files from ASC to local (need to exit ASC)
+```  
+$ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
+```
 # Steps and functions
 ## 1. quality_check
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
@@ -69,7 +72,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 ### Output Format
 **[Sample output file](sample_files/4040-KH-17.4040-KH-14_0_filtered_R1_fastqc.html)**
 
-|   |Output is  a `.html` file with the following columns. It can be viewed in a web browser. |
+|   |Output is  a `.html` file with the following columns. It can be [downloaded](#downloaded) and viewed in a web browser. |
 |---|---|
 
 
