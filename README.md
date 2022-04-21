@@ -18,11 +18,11 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
 ## Table of Contents
 [**Environment and Usage**](#installation-and-usage)  
 [**Functions**](#commands)  
-[**Quality check**](#Quality check)  
-[**Reads clean**](#Reads clean)  
-[**Genome index**](#Genome index) 
-[**Reads mapping**](#Reads mapping)
-[**Reads counts**](#Reads counts)
+   1. [Quality check](#Quality check)  
+   2. [Reads clean](#Reads clean)  
+   3. [Genome index](#Genome index) 
+   4. [Reads mapping](#Reads mapping)
+   5. [Reads counts](#Reads counts)
 
 # Environment and Usage
 _**RNS_Sequencing requires Alabama Super Computer**. You can request an new or existing account from [ASC](https://www.asc.edu/hpc/ASA-HPC-Annual-Grant-Request-Form). Highly recommand to email them if you need to contact them._
@@ -37,8 +37,13 @@ $ ssh your_asc_account@@dmc.asc.edu
 $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_directory_you_want_to_paste_into
 ```
 Once you login, **submit** jobs to ASC to run your scripts
-# Functions
 
+# Functions
+## crosspoints
+| [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
+|---|---|---|---|
+
+### Description
 
 ## Box Folder
 
