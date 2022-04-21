@@ -20,7 +20,7 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
 [**Steps and functions**](#steps-and-functions)  
   1. Check the quality of the reads using function: [quality_check](#quality-check)
   2. Clean reads using function: [trim_read](#trim-read)  
-  3. Check the quality of the trimmed reads using function: [qc_trimmed](#qc_trimmed)
+  3. Check the quality of the trimmed reads using function: [qc_trimmed](#qc-trimmed)
   4. Mapping the genome using function: [mapping](#mapping)
    
 
@@ -47,7 +47,7 @@ $ run_script my_scripts
 $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
 ```
 # Steps and functions
-## 1. quality_check
+## quality_check
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
 
