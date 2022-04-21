@@ -70,12 +70,12 @@ $ quality_check /home/asc_account/path_to_your_folder
 |line3|A separator, which is simply a plus (+) sign.|
 |line4|The base call quality scores.|
 ### Output Format
-**[Sample output file](sample_files/4040-KH-17.4040-KH-14_0_filtered_R1_fastqc.html)**
+**[Sample output file](sample_data/4040-KH-17.4040-KH-14_0_filtered_R1_fastqc.html)**
 
-|   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and [viewed](file:///Users/qiongzhang/s4b_RNA_sequencing2/RNASeq_Data/FastQC/4040-KH-17.4040-KH-17_0_filtered_R1_fastqc.html)
+|   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
 in a web browser. |
 |---|---|
-![](README_images/)
+![](README_images/quality_check_output_html_file.png)
 
 ## Box Folder
 
