@@ -49,27 +49,27 @@ $ run_script my_scripts
 |---|---|---|---|
 
 ### Description
-`quality_check` 
+`quality_check` load `fastqc` module
 ### Usage
 
-Running the `quality_check` function requires an input path, output path, and a minimum size argument. There are also three optional arguments which can be found in the table below.
+Running the `quality_check` function requires  and an output path. 
 
 ```
-$ snpbinner crosspoints --input PATH --output PATH (--min-length INT | --min-ratio FLOAT) [optional args]  
+$ quality_check /home/asc_account/path_to_your_folder  
 ``` 
 ### Input Format
-**[Sample input file](sample_files/crosspoints_in.fastq.gz)**
+**[Sample input file](sample_files/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
 
-|   |Input should be formatted as a tab‑separated value (TSV) file with the following columns.|
+|   |Input should be formatted as a compressed fastq file showing as `.fast.gz`.|
 |---|---|
-|0|The SNP marker ID.|
-|1|The position of the marker in base pairs from the start of the chromosome.|
-|2+|RIL ID (header) and the called genotype of the RIL at each position.|
-
+|0|Unique read ID.|
+|1|The sequence.|
+|2|A separator, which is simply a plus (+) sign.|
+|3|The base call quality scores.|
 ### Output Format
-**[Sample output file](sample_files/crosspoints_out.tsv)**
+**[Sample output file](sample_files/4040-KH-17.4040-KH-14_0_filtered_R1_fastqc.html)**
 
-|   |Output is formatted as a comma‑separated value (CSV) file with the following columns.|
+|   |Output is  a .html file with the following columns. It can be viewed in a web browser. |
 |---|---|
 |0|The RIL ID|
 |Odd|Location of a crosspoint. (Empty after the chromosome ends.)|
