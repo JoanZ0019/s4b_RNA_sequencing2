@@ -27,7 +27,7 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
 # Environment and Usage
 _**RNS_Sequencing requires Alabama Super Computer**. You can request an new or existing account from [ASC](https://www.asc.edu/hpc/ASA-HPC-Annual-Grant-Request-Form). Highly recommand to email them if you need to contact them._
 
-- To run the RNA_Sequencing utility, set up your ASC account and run from ASC 
+- To run the RNA_Sequencing utility, **set up your ASC account** and run from ASC 
 
 ```  
 $ ssh your_asc_account@dmc.asc.edu
@@ -42,7 +42,7 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 $ chmod +x my_scripts
 $ run_script my_scripts
 ``` 
-- **Download** files from ASC to local (need to exit ASC)
+- #**Download** files from ASC to local (need to exit ASC)
 ```  
 $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
 ```
