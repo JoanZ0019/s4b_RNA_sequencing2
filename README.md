@@ -61,7 +61,7 @@ Running the `quality_check` function requires  and an output path.
 $ quality_check /home/asc_account/path_to_your_folder  
 ``` 
 ### Input Format
-**[Sample input file](sample_files/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
+**[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
 
 |   |Input should be formatted as a compressed fastq file showing as `.fastq.gz`. The fastq file format:|
 |---|---|
