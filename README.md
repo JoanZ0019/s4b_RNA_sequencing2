@@ -18,7 +18,8 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
 ## Table of Contents
 [**Environment and Usage**](#environment-and-usage)  
 [**Steps and functions**](#steps-and-functions)  
-    1. Check the quality of the reads [quality_check](#quality-check) 
+    1. Check the quality of the reads ```[quality_check](#quality-check)```
+   
     2. [trim_read](#reads-clean)  
     [Genome index](#genome-index) 
     [Reads mapping](#reads-mapping)
