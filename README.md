@@ -16,13 +16,13 @@ In this project, **bash** scripts were developed:
 These analyses will consist of RNA-seq data extracted from the common mouse species, *Mus musculus*, that was exposed to two separate treatment groups. 
 
 ## Table of Contents
-[**Environment and Usage**](#installation-and-usage)  
-[**Functions**](#commands)  
-   1. [Quality check](#Quality check)  
-   2. [Reads clean](#Reads clean)  
-   3. [Genome index](#Genome index) 
-   4. [Reads mapping](#Reads mapping)
-   5. [Reads counts](#Reads counts)
+[**Environment and Usage**](#environment-and-usage)  
+[**Functions and steps**](#functions)  
+    1. [quality_check](#quality-check)  
+    2. [trim_read](#reads-clean)  
+    [Genome index](#genome-index) 
+    [Reads mapping](#reads-mapping)
+    [Reads counts](#reads-counts)
 
 # Environment and Usage
 _**RNS_Sequencing requires Alabama Super Computer**. You can request an new or existing account from [ASC](https://www.asc.edu/hpc/ASA-HPC-Annual-Grant-Request-Form). Highly recommand to email them if you need to contact them._
@@ -30,7 +30,7 @@ _**RNS_Sequencing requires Alabama Super Computer**. You can request an new or e
 To run the RNA_Sequencing utility, set up your ASC account and run from ASC 
 
 ```  
-$ ssh your_asc_account@@dmc.asc.edu
+$ ssh your_asc_account@dmc.asc.edu
 ```  
 **Before** you loged in, copy and paste from local to ASC
 ```  
@@ -38,7 +38,7 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 ```
 Once you login, **submit** jobs to ASC to run your scripts
 
-# Functions
+# Functions and steps
 ## crosspoints
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
