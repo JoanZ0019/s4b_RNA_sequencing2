@@ -74,7 +74,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 
 |   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
 in a web browser. |
-|---|---|
+
 ![](README_images/quality_check_output_html_file.png)
 
 ## Box Folder
