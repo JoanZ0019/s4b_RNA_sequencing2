@@ -47,7 +47,6 @@ $ run_script my_scripts
 $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
 ```
 # Steps and functions
-### <a name="quality-check"></a>quality_check 
 ### quality-check 
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
