@@ -118,5 +118,15 @@ The purpose of ...... (need to finish)
 
 """
 
+function index_genome {
+
+
+
+
+
+
+
+
+
 
 
