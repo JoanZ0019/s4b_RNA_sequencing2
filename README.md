@@ -172,7 +172,7 @@ $ STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /home/aubars001/s4b-p
 ### Input Format
 **[Sample input file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
 ### Output Format
-**[Sample output file]
+**[Sample output file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
 ## Box Folder
 
 Here is the link to the Box Folder with our data: https://auburn.box.com/s/x17154cah63h3yp4wd14ak6p0fa3t5jz
