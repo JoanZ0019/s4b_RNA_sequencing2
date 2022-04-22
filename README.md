@@ -77,7 +77,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 in a web browser. |
 ![](README_images/quality_check_output_html_file.png)
 
-
+## Step 2.
 ### trim-read 
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
@@ -99,7 +99,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 |   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
 in a web browser. |
 
-
+## Step 3.
 ### qc-trimmed 
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
@@ -118,7 +118,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 ### Output Format
 **[Sample output file]
 
-
+## Step 4.
 ### mapping
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
