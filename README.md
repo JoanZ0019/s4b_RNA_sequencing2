@@ -53,13 +53,13 @@ $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_lo
 |---|---|---|---|
 
 ### Description
-`quality_check` load `fastqc` module
+`quality_check` is a first essential step in bioinformatics analysis of RNA-Seq data because sequencing errors and contaminations may be introduced into the raw data during the library preparation, sequencing and base calling steps. This function needs to load `fastqc` module. 
 ### Usage
 
-Running the `quality_check` function requires  and an output path. 
+Running the `quality_check` function requires an output path. 
 
 ```
-$ quality_check /home/asc_account/path_to_your_folder  
+$ quality_check /home/asc_account/path_to_your_output_folder 
 ``` 
 ### Input Format
 **[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
@@ -71,7 +71,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 |line3|A separator, which is simply a plus (+) sign.|
 |line4|The base call quality scores.|
 ### Output Format
-**[Sample output file](sample_data/4040-KH-14.4040-KH-14_0_filtered_R1_fastqc.html)**
+**[Sample output file](sample_data/quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_fastqc.html)**
 
 |   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
 in a web browser. |
@@ -83,20 +83,20 @@ in a web browser. |
 |---|---|---|---|
 
 ### Description
-`trim_read` load `fastqc` module
+`trim_read` requires to load `trimgalore` module, which will automatically detect and cut sequences at illumina adapters
 ### Usage
 
-Running the `trim_read` function requires  and an output path. 
+Running the `trim_read` function requires an output path. 
 
 ```
-$ quality_check /home/asc_account/path_to_your_folder  
+$ trim_read /home/asc_account/path_to_your_output_folder  
 ``` 
 ### Input Format
 **[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
 ### Output Format
-**[Sample output file](sample_data/4040-KH-14.4040-KH-14_0_filtered_R1_fastqc.html)**
-
-|   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
+**[Sample output file1](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz_trimming_report.txt)**
+**[Sample output file2](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq.gz)**
+|   |Output is  a `trimming_report.txt` and `val_1.fq.gz` files. It can be downloaded from ASC to local and viewed
 in a web browser. |
 
 ## Step 3.
@@ -108,7 +108,7 @@ in a web browser. |
 `qc-trimmed` load `fastqc` module
 ### Usage
 
-Running the `trim_read` function requires  and an output path. 
+Running the `trim_read` function requires an output path. 
 
 ```
 $ quality_check /home/asc_account/path_to_your_folder  
@@ -127,7 +127,7 @@ $ quality_check /home/asc_account/path_to_your_folder
 `mapping` load `fastqc` module
 ### Usage
 
-Running the `mapping` function requires  and an output path. 
+Running the `mapping` function requires an output path. 
 
 ```
 $ mapping /home/asc_account/path_to_your_folder  
