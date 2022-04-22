@@ -83,7 +83,7 @@ in a web browser. |
 
 ## Step 2.
 ### trim-read 
-| [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
+| [Description](#description-1) | [Usage](#usage-1) | [Input Format](#input-format-1) | [Output Format](#output-format-1) |
 |---|---|---|---|
 
 ### Description
@@ -119,7 +119,7 @@ in a web browser.
 
 ## Step 3.
 ### qc-trimmed 
-| [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
+| [Description](#description-2) | [Usage](#usage-2) | [Input Format](#input-format-2) | [Output Format](#output-format-2) |
 |---|---|---|---|
 
 ### Description
@@ -152,7 +152,7 @@ in a web browser. |
 ![](README_images/trimmed_quality_check_output_html_file.png)
 ## Step 4.
 ### mapping
-| [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
+| [Description](#description-3) | [Usage](#usage-3) | [Input Format](#input-format-3) | [Output Format](#output-format-3) |
 |---|---|---|---|
 
 ### Description
