@@ -66,7 +66,7 @@ Using module `fastqc` requires input files, `-o` output_folder, and an output fo
 $ fastqc *.fastq.gz -o path_of_output_folder
 ```
 ### Input Format
-**[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
+**[Sample input file](sample_data/raw_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
 
 |   |Input should be formatted as a compressed fastq file showing as `.fastq.gz`. The fastq file format:|
 |---|---|
@@ -97,7 +97,7 @@ $ trim_read /home/asc_account/path_to_your_output_folder
 ``` 
 Using module `trimgalore` requires `--paired`, `--output_dir`, path_of_output_folder, paired_input_files.
 ```
-trim_galore --paired --output_dir path_of_output_folder 4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz 4040-KH-14.4040-KH-14_0_filtered_R2.fastq.gz
+trim_galore --paired --output_dir path_of_output_folder *.fastq.gz 
 ```
 
 ### Input Format
@@ -123,26 +123,40 @@ in a web browser.
 |---|---|---|---|
 
 ### Description
-`qc-trimmed` load `fastqc` module
+`qc-trimmed` load `fastqc` module to check quality of the trimmed reads 
 ### Usage
 
-Running the `trim_read` function requires an output path. 
+Running the `qc-trimmed` function requires an output path. 
 
 ```
-$ quality_check /home/asc_account/path_to_your_folder  
+$ qc-trimmed /home/asc_account/path_to_your_output_folder 
 ``` 
+Using module `fastqc` requires input files, `-o` output_folder, and an output folder 
+```
+$ fastqc *.fastq.gz -o path_of_output_folder
+```
 ### Input Format
-**[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
-### Output Format
-**[Sample output file]
+**[Sample input file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq.gz)**
 
+|   |Input should be formatted as a compressed fastq file showing as `val_1.fq.gz` or `val_2.fq.gz`. The fastq file format:|
+|---|---|
+|line1|Unique read ID.|
+|line2|The sequence.|
+|line3|A separator, which is simply a plus (+) sign.|
+|line4|The base call quality scores.|
+### Output Format
+**[Sample output file](sample_data/quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)**
+
+|   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
+in a web browser. |
+![](README_images/trimmed_quality_check_output_html_file.png)
 ## Step 4.
 ### mapping
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
 
 ### Description
-`mapping` load `fastqc` module
+`mapping` load `star` module
 ### Usage
 
 Running the `mapping` function requires an output path. 
@@ -150,8 +164,13 @@ Running the `mapping` function requires an output path.
 ```
 $ mapping /home/asc_account/path_to_your_folder  
 ``` 
+Using module `star` requires input files, `-o` output_folder, and an output folder 
+```
+$ STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /home/aubars001/s4b-project/RNASeq_Data/Genome/Mapped --genomeFastaFiles /home/aubars001/s4b-project/RNASeq_Data/Genome/GCA_000001635.9_GRCm39_genomic.fna --sjdbGTFfile /home/aubars001/s4b-project/RNASeq_Data/Genome/GCA_000001635.9_GRCm39_genomic.gtf --sjdbOverhang 99
+	
+```
 ### Input Format
-**[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
+**[Sample input file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
 ### Output Format
 **[Sample output file]
 ## Box Folder
