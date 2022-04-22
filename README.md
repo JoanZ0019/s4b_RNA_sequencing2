@@ -63,7 +63,7 @@ $ quality_check /home/asc_account/path_to_your_output_folder
 ``` 
 Using module `fastqc` requires input files, `-o` output_folder, and an output folder 
 ```
-fastqc *.fastq.gz -o path_of_output_folder
+$ fastqc *.fastq.gz -o path_of_output_folder
 ```
 ### Input Format
 **[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
@@ -95,6 +95,11 @@ Running the `trim_read` function requires an output path.
 ```
 $ trim_read /home/asc_account/path_to_your_output_folder  
 ``` 
+Using module `trimgalore` requires `--paired`, `--output_dir`, path_of_output_folder, paired_input_files.
+```
+trim_galore --paired --output_dir path_of_output_folder 4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz 4040-KH-14.4040-KH-14_0_filtered_R2.fastq.gz
+```
+
 ### Input Format
 **[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
 
