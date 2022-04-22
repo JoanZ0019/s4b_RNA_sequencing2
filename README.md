@@ -95,7 +95,7 @@ Running the `trim_read` function requires an output path.
 ```
 $ trim_read /home/asc_account/path_to_your_output_folder  
 ``` 
-Using module `trimgalore` requires `--paired`, `--output_dir`, path_of_output_folder, paired_input_files. TrimGalore was struggling to pair files, so this had to be <hard coded> for **each pair**
+Using module `trimgalore` requires `--paired`, `--output_dir`, path_of_output_folder, paired_input_files. TrimGalore was struggling to pair files, so this had to be <u>hard coded</u> for **each pair**
 ```
 trim_galore --paired --output_dir path_of_output_folder *.fastq.gz 
 ```
