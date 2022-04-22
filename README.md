@@ -98,7 +98,7 @@ $ trim_read /home/asc_account/path_to_your_output_folder
 
 **[Sample output file2](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq.gz)**
 
-Output is  a `trimming_report.txt` and `val_1.fq.gz` files. It can be downloaded from ASC to local and viewed
+Output is `trimming_report.txt` and `val_1.fq.gz` files. It can be downloaded from ASC to local and viewed
 in a web browser. 
 
 ## Step 3.
