@@ -1,0 +1,186 @@
+
+SUMMARISING RUN PARAMETERS
+==========================
+Input filename: 4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz
+Trimming mode: paired-end
+Trim Galore version: 0.6.6
+Cutadapt version: 2.10
+Number of cores used for trimming: 1
+Quality Phred score cutoff: 20
+Quality encoding type selected: ASCII+33
+Using Illumina adapter for trimming (count: 10221). Second best hit was Nextera (count: 1)
+Adapter sequence: 'AGATCGGAAGAGC' (Illumina TruSeq, Sanger iPCR; auto-detected)
+Maximum trimming error rate: 0.1 (default)
+Minimum required adapter overlap (stringency): 1 bp
+Minimum required sequence length for both reads before a sequence pair gets removed: 20 bp
+Output file will be GZIP compressed
+
+
+This is cutadapt 2.10 with Python 3.8.7
+Command line parameters: -j 1 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC 4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz
+Processing reads on 1 core in single-end mode ...
+Finished in 7.59 s (81 us/read; 0.74 M reads/minute).
+
+=== Summary ===
+
+Total reads processed:                  93,261
+Reads with adapters:                    47,896 (51.4%)
+Reads written (passing filters):        93,261 (100.0%)
+
+Total basepairs processed:    14,034,423 bp
+Quality-trimmed:                  11,102 bp (0.1%)
+Total written (filtered):     13,482,447 bp (96.1%)
+
+=== Adapter 1 ===
+
+Sequence: AGATCGGAAGAGC; Type: regular 3'; Length: 13; Trimmed: 47896 times
+
+No. of allowed errors:
+0-9 bp: 0; 10-13 bp: 1
+
+Bases preceding removed adapters:
+  A: 21.8%
+  C: 34.6%
+  G: 25.8%
+  T: 16.1%
+  none/other: 1.6%
+
+Overview of removed sequences
+length	count	expect	max.err	error counts
+1	22098	23315.2	0	22098
+2	8178	5828.8	0	8178
+3	2253	1457.2	0	2253
+4	1119	364.3	0	1119
+5	50	91.1	0	50
+6	392	22.8	0	392
+7	356	5.7	0	356
+8	414	1.4	0	414
+9	403	0.4	0	402 1
+10	318	0.1	1	308 10
+11	412	0.0	1	396 16
+12	725	0.0	1	708 17
+13	11	0.0	1	7 4
+14	690	0.0	1	672 18
+15	15	0.0	1	12 3
+16	704	0.0	1	679 25
+17	39	0.0	1	32 7
+18	420	0.0	1	409 11
+19	1048	0.0	1	1028 20
+20	3	0.0	1	2 1
+21	2	0.0	1	2
+22	7	0.0	1	5 2
+23	332	0.0	1	327 5
+24	855	0.0	1	836 19
+25	12	0.0	1	9 3
+26	271	0.0	1	262 9
+27	252	0.0	1	248 4
+28	12	0.0	1	10 2
+29	289	0.0	1	280 9
+30	298	0.0	1	284 14
+31	426	0.0	1	419 7
+32	32	0.0	1	31 1
+33	706	0.0	1	692 14
+34	17	0.0	1	13 4
+35	225	0.0	1	218 7
+36	226	0.0	1	220 6
+37	11	0.0	1	10 1
+38	371	0.0	1	366 5
+39	16	0.0	1	14 2
+40	212	0.0	1	204 8
+41	181	0.0	1	177 4
+42	178	0.0	1	174 4
+43	180	0.0	1	175 5
+44	335	0.0	1	328 7
+45	128	0.0	1	125 3
+46	57	0.0	1	55 2
+47	5	0.0	1	4 1
+48	138	0.0	1	134 4
+49	120	0.0	1	115 5
+50	99	0.0	1	96 3
+51	136	0.0	1	132 4
+52	190	0.0	1	186 4
+53	69	0.0	1	68 1
+54	11	0.0	1	8 3
+55	131	0.0	1	129 2
+56	142	0.0	1	139 3
+57	23	0.0	1	21 2
+58	40	0.0	1	39 1
+59	149	0.0	1	146 3
+60	3	0.0	1	3
+61	6	0.0	1	6
+62	80	0.0	1	78 2
+63	9	0.0	1	9
+64	10	0.0	1	10
+65	30	0.0	1	29 1
+66	63	0.0	1	62 1
+67	33	0.0	1	32 1
+68	40	0.0	1	39 1
+69	24	0.0	1	24
+70	16	0.0	1	16
+71	3	0.0	1	3
+72	2	0.0	1	2
+73	13	0.0	1	13
+74	12	0.0	1	12
+75	17	0.0	1	17
+76	15	0.0	1	15
+77	13	0.0	1	13
+78	15	0.0	1	14 1
+79	12	0.0	1	12
+80	11	0.0	1	11
+81	12	0.0	1	12
+82	8	0.0	1	8
+83	6	0.0	1	6
+84	10	0.0	1	10
+85	6	0.0	1	6
+86	8	0.0	1	8
+87	1	0.0	1	0 1
+88	4	0.0	1	3 1
+89	5	0.0	1	4 1
+90	3	0.0	1	3
+91	5	0.0	1	5
+92	3	0.0	1	2 1
+93	3	0.0	1	3
+94	2	0.0	1	2
+95	6	0.0	1	6
+96	1	0.0	1	1
+97	3	0.0	1	3
+98	4	0.0	1	4
+99	2	0.0	1	2
+101	2	0.0	1	2
+102	3	0.0	1	3
+103	2	0.0	1	1 1
+105	2	0.0	1	2
+106	3	0.0	1	3
+107	2	0.0	1	2
+108	1	0.0	1	1
+109	1	0.0	1	1
+113	3	0.0	1	3
+115	3	0.0	1	3
+117	2	0.0	1	2
+119	1	0.0	1	0 1
+121	2	0.0	1	1 1
+122	2	0.0	1	2
+123	1	0.0	1	1
+124	1	0.0	1	1
+129	1	0.0	1	1
+131	1	0.0	1	1
+134	1	0.0	1	1
+136	2	0.0	1	2
+138	1	0.0	1	1
+140	2	0.0	1	2
+141	1	0.0	1	1
+142	5	0.0	1	5
+143	2	0.0	1	2
+144	2	0.0	1	2
+145	2	0.0	1	2
+146	3	0.0	1	2 1
+147	5	0.0	1	5
+148	4	0.0	1	4
+149	4	0.0	1	4
+150	6	0.0	1	1 5
+151	772	0.0	1	104 668
+
+RUN STATISTICS FOR INPUT FILE: 4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz
+=============================================
+93261 sequences processed in total
+
