@@ -47,7 +47,7 @@ $ run_script my_scripts
 $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
 ```
 # Steps and functions
-### 1. quality-check 
+### quality-check 
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
 
@@ -74,9 +74,67 @@ $ quality_check /home/asc_account/path_to_your_folder
 
 |   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
 in a web browser. |
-
 ![](README_images/quality_check_output_html_file.png)
 
+
+### trim-read 
+| [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
+|---|---|---|---|
+
+### Description
+`trim_read` load `fastqc` module
+### Usage
+
+Running the `trim_read` function requires  and an output path. 
+
+```
+$ quality_check /home/asc_account/path_to_your_folder  
+``` 
+### Input Format
+**[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
+### Output Format
+**[Sample output file](sample_data/4040-KH-14.4040-KH-14_0_filtered_R1_fastqc.html)**
+
+|   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
+in a web browser. |
+
+
+### qc-trimmed 
+| [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
+|---|---|---|---|
+
+### Description
+`qc-trimmed` load `fastqc` module
+### Usage
+
+Running the `trim_read` function requires  and an output path. 
+
+```
+$ quality_check /home/asc_account/path_to_your_folder  
+``` 
+### Input Format
+**[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
+### Output Format
+**[Sample output file]
+
+
+### mapping
+| [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
+|---|---|---|---|
+
+### Description
+`mapping` load `fastqc` module
+### Usage
+
+Running the `mapping` function requires  and an output path. 
+
+```
+$ mapping /home/asc_account/path_to_your_folder  
+``` 
+### Input Format
+**[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
+### Output Format
+**[Sample output file]
 ## Box Folder
 
 Here is the link to the Box Folder with our data: https://auburn.box.com/s/x17154cah63h3yp4wd14ak6p0fa3t5jz
