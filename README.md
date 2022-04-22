@@ -61,6 +61,10 @@ Running the `quality_check` function requires an output path.
 ```
 $ quality_check /home/asc_account/path_to_your_output_folder 
 ``` 
+Using module `fastqc` requires input files, `-o` output_folder, and an output folder 
+```
+fastqc *.fastq.gz -o path_of_output_folder
+```
 ### Input Format
 **[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
 
@@ -93,6 +97,13 @@ $ trim_read /home/asc_account/path_to_your_output_folder
 ``` 
 ### Input Format
 **[Sample input file](sample_data/4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz)**
+
+|   |Input should be formatted as a `.fastq.gz` with the following columns.|
+|---|---|
+|line1|Unique read ID.|
+|line2|The sequence.|
+|line3|A separator, which is simply a plus (+) sign.|
+|line4|The base call quality scores.|
 ### Output Format
 **[Sample output file1](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz_trimming_report.txt)**
 
