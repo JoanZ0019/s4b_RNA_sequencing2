@@ -25,7 +25,7 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
 ## Table of Contents
 [**Environment and Usage**](#environment-and-usage)  
 [**Steps and functions**](#steps-and-functions)  
-  1. Check the quality of the reads using function: [quality_check](#quality-check)
+  1. Check the quality of the reads using function: [FASTQC_raw](#FASTQC-raw)
   2. Clean reads using function: [trim_read](#trim-read)  
   3. Check the quality of the trimmed reads using function: [qc_trimmed](#qc-trimmed)
   4. Mapping the genome using function: [mapping](#mapping)
@@ -55,7 +55,7 @@ $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_lo
 ```
 # Steps and functions
 ## Step 1.
-### quality-check 
+### FASTQC-raw 
 | [Description](#description) | [Usage](#usage) | [Input Format](#input-format) | [Output Format](#output-format) |
 |---|---|---|---|
 
@@ -63,10 +63,10 @@ $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_lo
 `quality_check` is a first essential step in bioinformatics analysis of RNA-Seq data because sequencing errors and contaminations may be introduced into the raw data during the library preparation, sequencing and base calling steps. This function needs to load `fastqc` module. 
 ### Usage
 
-Running the `quality_check` function requires an output path. 
+Running the `FASTQC-raw` function requires an output path. 
 
 ```
-$ quality_check /home/asc_account/path_to_your_output_folder 
+$ FASTQC-raw /home/asc_account/path_to_your_output_folder 
 ``` 
 Using module `fastqc` requires input files, `-o` output_folder, and an output folder 
 ```
