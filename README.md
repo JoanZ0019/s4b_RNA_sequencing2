@@ -43,13 +43,13 @@ $ ssh your_asc_account@dmc.asc.edu
 ```  
 $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_directory_you_want_to_paste_into
 ```
-- Once you login (use `exit` to logout), **submit** jobs to ASC to run your scripts
+- Once you login, **submit** jobs to ASC to run your scripts
 
 ```  
 $ chmod +x my_scripts
 $ run_script my_scripts
 ``` 
-- **Download** files from ASC to local (need to exit ASC)
+- **Download** files from ASC to local (need to exit ASC: use `exit` to exit ASC)
 ```  
 $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
 ```
