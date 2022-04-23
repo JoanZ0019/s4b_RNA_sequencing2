@@ -6,17 +6,26 @@
 #-------------------------------------------------#
 #RNAseq Data Analysis
 """
+
 The purpose of this script is to prime raw RNA sequences for differential gene expression analysis.
 It is recommended to run this sequence through a high performance computer (like ASC).
-We are using the Alabama Super Computer, so our loaded modules reflect the syntax of that system. Please adjust accordingly.
+We are using the Alabama Super Computer, so our loaded modules reflect the syntax of that system. Please adjust accordingly to your own system.
 
 You will need the following in order to run the script:
 -raw FASTA files
 -Reference Genome (Genome sequence (GRCm39) (FASTA format)
     -- (we used the reference genome from https://www.gencodegenes.org/mouse/)
 -Comprehensive gene annotation (GTF or GFF3 format)
+    -- can also be found on https://www.gencodegenes.org/mouse/
 
-We are using the data provided through the paper 'Granzyme B prevents aberrant IL-17 production and intestinal pathogenicity in CD4+ T cell'. When unzipping the data file 'RNASeq_Data.zip', there are two subfolders titled 'Case' and 'Control.' These subfolders contain the raw RNA sequences from the two conditions.
+We are using the data provided through the paper 'Granzyme B prevents aberrant IL-17 production and intestinal pathogenicity in CD4+ T cell'. When unzipping the data file 'RNASeq_Data.zip', there are two subfolders titled 'Case' and 'Control.' These subfolders contain the raw RNA sequences from the two conditions. For each sample there are two reads, R1 and R2 which are saved as .fastq files. The files are labeled with the specific sample ID, specification that it has been filtered, and what read direction it is:  SAMPLEID_filtered_R1.fastq SAMPLEID_filtered_R2.fastq
+
+In this script we will first assess the quality of the reads through FASTQC to identify the adaptor sequence to remove. We will then use TrimGalore! to remove the adaptor sequence and re-run FASTQC to ensure that the data was trimmed properly. Next, we need to index the reference genome (provided by the link above) to prepare for alignment. After indexing, the script aligns the trimmed sequences (fastq files) to the reference genome.
+
+
+FUTURE STEPS:
+After finishing this script, the
+
 """
 
 
