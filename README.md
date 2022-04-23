@@ -53,15 +53,13 @@ $ run_script my_scripts
 ```  
 $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_local
 ```
-
-https://user-images.githubusercontent.com/91216328/164944262-37d0aab1-f1eb-4852-9238-9dfd3bf8e937.mp4
-
-
-
 - **Unzip** the `.zip` file into the same director
 ```  
 $ unzip path_of_files
 ```
+
+https://user-images.githubusercontent.com/91216328/164944932-936fce64-9bba-45df-a3b1-02e1c4d6cfbc.mp4
+
 # Steps and functions
 ## Step 1.
 ### FASTQC-raw 
