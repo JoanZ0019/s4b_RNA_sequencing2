@@ -126,11 +126,29 @@ function FASTQC_trimmed {
 
 
 #-----------------------Step 4 - Index the Reference Genome for Alignment ----------------------------------
+
 """
-The purpose of ...... (need to finish)
+The purpose of indexing the reference genome is to allow the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process.
 
 """
 
+function INDEX_genome {
+
+    """
+    
+    """
+
+    #GRCm39.genome.fa - genome
+    #
+    #bowtie2-build [options]* <reference_in> <bt2_base>
+    
+    #!/bin/bash
+    source /opt/asn/etc/asn-bash-profiles-special/modules.sh
+    module load bowtie2/2.2.9
+
+    bowtie2-build -f GRCm39.genome.fa mouse
+    
+}
 
 
 
