@@ -133,6 +133,9 @@ trim_galore --paired --output_dir path_of_output_folder 4040-KH-14.4040-KH-14_0_
 |line3|A separator, which is simply a plus (+) sign.|
 |line4|The base call quality scores.|
 ### Output Format
+#### In terminal
+<img width="561" alt="trim_reads_Terminal_output" src="https://user-images.githubusercontent.com/91216328/164949428-262102d9-594e-420b-8217-52db7b61bb47.png">
+
 **[Sample output file1](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1.fastq.gz_trimming_report.txt)**
 
 **[Sample output file2](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq.gz)**
@@ -168,6 +171,8 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 |line3|A separator, which is simply a plus (+) sign.|
 |line4|The base call quality scores.|
 ### Output Format
+#### In terminal
+
 **[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)**
 
 |   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
