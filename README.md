@@ -46,6 +46,11 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 - Once you login, **submit** jobs to ASC to run your scripts
 
 ```  
+
+
+https://user-images.githubusercontent.com/91216328/164949011-7358eb93-f115-46cb-a49a-2960e5687bc9.mp4
+
+
 $ chmod +x my_scripts
 $ run_script my_scripts
 ``` 
@@ -89,6 +94,9 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 |line3|A separator, which is simply a plus (+) sign.|
 |line4|The base call quality scores.|
 ### Output Format
+#### In terminal
+<img width="639" alt="FASTQC-raw_Terminal output" src="https://user-images.githubusercontent.com/91216328/164949190-2cdacb0e-0c21-4b27-978b-22f6f1cf6f78.png">
+
 **[Sample output file](sample_data/quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_fastqc.html)**
 
 |   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
