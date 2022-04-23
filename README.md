@@ -5,7 +5,6 @@ Next generation sequencing has provided opportunities to understand the molecula
 
 
 
-https://user-images.githubusercontent.com/91216328/164916561-27884ca3-50e8-4998-b48d-9662bca3d060.mp4
 
 
 
