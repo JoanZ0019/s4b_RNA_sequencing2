@@ -176,7 +176,7 @@ function Aligning_Reads {
     bowtie2 -x mouse -1 4040-KH-5.4040-KH-5_0_filtered_R1_val_1.fq -2 4040-KH-5.4040-KH-5_0_filtered_R2_val_2.fq  -S aligned_genome_sequences5.sam
     bowtie2 -x mouse -1 4040-KH-6.4040-KH-6_0_filtered_R1_val_1.fq -2 4040-KH-6.4040-KH-6_0_filtered_R2_val_2.fq  -S aligned_genome_sequences6.sam
     
-
+    cp mouse* ../Case
     cd ../Case
     bowtie2 -x mouse -1 4040-KH-16.4040-KH-16_0_filtered_R1_val_1.fq -2 4040-KH-16.4040-KH-16_0_filtered_R2_val_2.fq  -S aligned_genome_sequences16.sam
     bowtie2 -x mouse -1 4040-KH-21.4040-KH-21_0_filtered_R1_val_1.fq -2 4040-KH-21.4040-KH-21_0_filtered_R2_val_2.fq  -S aligned_genome_sequences21.sam
