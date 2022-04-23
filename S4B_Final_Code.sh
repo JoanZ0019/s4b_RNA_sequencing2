@@ -170,7 +170,7 @@ function Aligning_Reads {
 
     cd trimmed_reads/Control
     #needed to hardcode the file names in order to get it to run
-    #bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq  -S aligned_genome_sequences14.sam
+    bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq  -S aligned_genome_sequences14.sam
     bowtie2 -x mouse -1 4040-KH-1.4040-KH-1_0_filtered_R1_val_1.fq -2 4040-KH-1.4040-KH-1_0_filtered_R2_val_2.fq  -S aligned_genome_sequences1.sam
     bowtie2 -x mouse -1 4040-KH-18.4040-KH-18_0_filtered_R1_val_1.fq -2 4040-KH-18.4040-KH-18_0_filtered_R2_val_2.fq  -S aligned_genome_sequences18.sam
     bowtie2 -x mouse -1 4040-KH-5.4040-KH-5_0_filtered_R1_val_1.fq -2 4040-KH-5.4040-KH-5_0_filtered_R2_val_2.fq  -S aligned_genome_sequences5.sam
@@ -187,3 +187,19 @@ function Aligning_Reads {
 }
 
 
+function main {
+    FASTQC_raw home/aubemw001/s4b-project/RNASeq_Data
+    trim_reads home/aubemw001/s4b-project/RNASeq_Data
+    FASTQC_trimmed home/aubemw001/s4b-project/RNASeq_Data
+    INDEX_genome home/aubemw001/s4b-project/RNASeq_Data
+    Aligning_Reads home/aubemw001/s4b-project/RNASeq_Data
+    
+}
+
+#--------------------------------------------Final Test ------------------------------------------------------
+
+echo "Starting RNA Sequencing"
+
+main
+
+echo "Ready for DeSeq analysis"
