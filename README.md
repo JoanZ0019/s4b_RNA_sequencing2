@@ -55,7 +55,7 @@ $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_lo
 ```
 - **Unzip** the `.zip` file into the same director
 ```  
-$ unzip  your_local_path_of_files
+$ unzip path_of_files
 ```
 # Steps and functions
 ## Step 1.
