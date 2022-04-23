@@ -136,10 +136,8 @@ function INDEX_genome {
     
     The set-up of the indexing script is:
         bowtie2-build [options]* <reference_in> <bt2_base>
-    where bowtie2-build is the main command, -f means that the input file is a FASTA file,
+    where bowtie2-build is the main command, -f means that the reference_in is a FASTA file, GRCm39.genome.fa is the reference genome. bt2_base is the base name for the output files. We used 'mouse' as the base name since this is the mouse genome. The output files will be 'mouse.1.bt2' 'mouse.2.bt2' 'mouse.3.bt2' 'mouse.4.bt2' 'mouse.rev.1.bt2' and 'mouse.rev.2.bt2'. These files will be used for the next alignment step. 
     
-    
-    http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs
     """
 
     
