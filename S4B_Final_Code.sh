@@ -24,7 +24,7 @@ In this script we will first assess the quality of the reads through FASTQC to i
 
 
 FUTURE STEPS:
-After finishing this script, the
+After finishing this script, the data is ready to be used to identify differentially expressed genes through programs like DEseq
 
 """
 
