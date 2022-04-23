@@ -6,22 +6,26 @@
 #-------------------------------------------------#
 #RNAseq Data Analysis
 """
-#The purpose of this script is to prime raw RNA sequences for differential gene expression analysis. You will need the following files in order to complete this analysis -.fastq files -reference genome (.fa .gtf). It is recommended to run this sequence through a high performance computer (like ASC).
-#We are using the Alabama Super Computer, so our modules reflect the syntax of that system. Please adjust accordingly. In order to 
+The purpose of this script is to prime raw RNA sequences for differential gene expression analysis.
+It is recommended to run this sequence through a high performance computer (like ASC).
+We are using the Alabama Super Computer, so our loaded modules reflect the syntax of that system. Please adjust accordingly.
 
 You will need the following in order to run the script:
--raw FASTA files 
--Reference Genome (Genome sequence (GRCm39) (FASTA) - and Comprehensive gene annotation (GTF and GFF3)
- -- (we used the reference genome from https://www.gencodegenes.org/mouse/)
+-raw FASTA files
+-Reference Genome (Genome sequence (GRCm39) (FASTA format)
+    -- (we used the reference genome from https://www.gencodegenes.org/mouse/)
+-Comprehensive gene annotation (GTF or GFF3 format)
 
+We are using the data provided through the paper 'Granzyme B prevents aberrant IL-17 production and intestinal pathogenicity in CD4+ T cell'. When unzipping the data file 'RNASeq_Data.zip', there are two subfolders titled 'Case' and 'Control.' These subfolders contain the raw RNA sequences from the two conditions.
 """
 
 
 #-------------Step 1 - FASTQC on raw sequences --------------
 
 """
-The purpose of running FASTQC is to check the quality of the reads as well as to identify the adaptor type used for sequencing. The output of this step will be a .zip and a .html file within the directory 'fastqc_results' which you need to make prior to running this step
-Packages needed for this step -FASTQC. If running on the Alabama Super Computer you need to make sure the 'module load fastqc/0.11.9' is in your script or else it will not run.
+The purpose of running FASTQC is to check the quality of the reads as well as to identify the adaptor type used for sequencing. The output of this step will be a .zip and a .html file within the directory 'fastqc_results'
+Packages needed for this step -FASTQC
+If running on the Alabama Super Computer you need to make sure the 'module load fastqc/0.11.9' is in your script or else it will not run.
 """
 
 function FASTQC_raw {
@@ -53,16 +57,16 @@ function trim_reads {
 
         #input files: *.fastq.gz in ~/s4b-project/RNASeq_Data/Case and ../Control - hardcoded here, but this can be customized by the user.
         #output files: *val_1.fq.gz (for R1) or *val_2.fq.gz (for R2) files
-                #These files will be located in ~/s4b-project/RNASeq_Data/TrimmedReads
+                #These files will be located in ~/s4b-project/RNASeq_Data/trimmed_reads
         #packages: trimgalore
-                #trimgalore will automatically detect and cut sequences at illumina adapters
+                #trimgalore will automatically detect and cut sequences at Illumina adapters
 
         ###############################################################################
 
         module load trimgalore/0.6.6 #loading trimgalore module from ASC
 
         #making new directories in ~/s4b-project/RNASeq_Data for the trimmed data to be stored
-        mkdir trimmed_reads #create new
+        mkdir trimmed_reads #create new dirextory
         mkdir trimmed_reads/Case
         mkdir trimmed_reads/Control
 
@@ -118,7 +122,7 @@ The purpose of ...... (need to finish)
 
 """
 
-function index_genome {
+
 
 
 
