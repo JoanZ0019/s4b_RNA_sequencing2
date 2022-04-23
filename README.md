@@ -3,6 +3,10 @@
 Next generation sequencing has provided opportunities to understand the molecular and genomic consequences of climate change induced environmental stressors on organisms. Specifically, RNA-seq has enabled us to understand what genes are being up- or down-regulated in response to these stressors. By analyzing gene expression data, we have a much greater understanding of the physiological consequences that have been previously described in many model species. 
 
 
+https://user-images.githubusercontent.com/91216328/164916388-c64f8747-cc65-4a5e-b851-a1af5edb7ec2.mp4
+
+
+
 ## Project Objectives
 
 In this project, **bash** scripts were developed:
