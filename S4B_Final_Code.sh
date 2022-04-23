@@ -6,7 +6,6 @@
 #-------------------------------------------------#
 #RNAseq Data Analysis
 """
-
 The purpose of this script is to prime raw RNA sequences for differential gene expression analysis.
 It is recommended to run this sequence through a high performance computer (like ASC).
 We are using the Alabama Super Computer, so our loaded modules reflect the syntax of that system. Please adjust accordingly to your own system.
@@ -28,7 +27,6 @@ After finishing this script, the data is ready to be used to identify differenti
 
 """
 
-
 #-------------Step 1 - FASTQC on raw sequences --------------
 
 """
@@ -44,7 +42,7 @@ function FASTQC_raw {
                 #This file will be located in ~/RNASeq_Data/fastqc_results as specified in the code. This can be modified by the user if they choose.
         #Packages: FastQC
 
-        ###############################################################################
+        #----------------------------------------------------------------------------
 
         module load fastqc/0.11.9 #loading the fastqc module from ASC
 
@@ -70,7 +68,7 @@ function trim_reads {
         #packages: trimgalore
                 #trimgalore will automatically detect and cut sequences at Illumina adapters
 
-        ###############################################################################
+        #---------------------------------------------------------------------------------------
 
         module load trimgalore/0.6.6 #loading trimgalore module from ASC
 
@@ -112,7 +110,7 @@ function FASTQC_trimmed {
                 #This file will be located in ~/s4b-project/RNASeq_Data/TrimmedReads/trimmed-FastQC as specified in the code. This can be modified by the user if they need.
         #Packages: FastQC
 
-        ###############################################################################
+        #----------------------------------------------------------------------------------------
 
         module load fastqc/0.11.9 #loading the fastqc module from ASC
 
@@ -126,7 +124,6 @@ function FASTQC_trimmed {
 
 
 #-----------------------Step 4 - Index the Reference Genome for Alignment ----------------------------------
-
 """
 The purpose of indexing the reference genome is to allow the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process.
 
@@ -142,6 +139,7 @@ function INDEX_genome {
     #
     #bowtie2-build [options]* <reference_in> <bt2_base>
     
+    
     #!/bin/bash
     source /opt/asn/etc/asn-bash-profiles-special/modules.sh
     module load bowtie2/2.2.9
@@ -149,7 +147,6 @@ function INDEX_genome {
     bowtie2-build -f GRCm39.genome.fa mouse
     
 }
-
 
 
 
