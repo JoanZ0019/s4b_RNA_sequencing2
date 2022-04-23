@@ -155,7 +155,7 @@ function INDEX_genome {
 #------------------------Step 5 - Align FASTQ Files to the Indexed Genome ------------------------------------------------
 """
 Talk about aligning reads and outout files .......
-http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs for 
+http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs for
 """
 
 function Aligning_Reads {
@@ -168,14 +168,22 @@ function Aligning_Reads {
     module load tophat/2.1.2
     module load bowtie2/2.2.9
 
-    cd trimmed_reads/Case
+    cd trimmed_reads/Control
     #needed to hardcode the file names in order to get it to run
-    bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq  -S aligned_genome_sequences14.sam
+    #bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq  -S aligned_genome_sequences14.sam
+    bowtie2 -x mouse -1 4040-KH-1.4040-KH-1_0_filtered_R1_val_1.fq -2 4040-KH-1.4040-KH-1_0_filtered_R2_val_2.fq  -S aligned_genome_sequences1.sam
+    bowtie2 -x mouse -1 4040-KH-18.4040-KH-18_0_filtered_R1_val_1.fq -2 4040-KH-18.4040-KH-18_0_filtered_R2_val_2.fq  -S aligned_genome_sequences18.sam
+    bowtie2 -x mouse -1 4040-KH-5.4040-KH-5_0_filtered_R1_val_1.fq -2 4040-KH-5.4040-KH-5_0_filtered_R2_val_2.fq  -S aligned_genome_sequences5.sam
+    bowtie2 -x mouse -1 4040-KH-6.4040-KH-6_0_filtered_R1_val_1.fq -2 4040-KH-6.4040-KH-6_0_filtered_R2_val_2.fq  -S aligned_genome_sequences6.sam
+    
 
-    cd ../Control
-    bowtie2 -x mouse
-
-
+    cd ../Case
+    bowtie2 -x mouse -1 4040-KH-16.4040-KH-16_0_filtered_R1_val_1.fq -2 4040-KH-16.4040-KH-16_0_filtered_R2_val_2.fq  -S aligned_genome_sequences16.sam
+    bowtie2 -x mouse -1 4040-KH-21.4040-KH-21_0_filtered_R1_val_1.fq -2 4040-KH-21.4040-KH-21_0_filtered_R2_val_2.fq  -S aligned_genome_sequences21.sam
+    bowtie2 -x mouse -1 4040-KH-22.4040-KH-22_0_filtered_R1_val_1.fq -2 4040-KH-22.4040-KH-22_0_filtered_R2_val_2.fq  -S aligned_genome_sequences22.sam
+    bowtie2 -x mouse -1 4040-KH-23.4040-KH-23_0_filtered_R1_val_1.fq -2 4040-KH-23.4040-KH-23_0_filtered_R2_val_2.fq  -S aligned_genome_sequences23.sam
+    bowtie2 -x mouse -1 4040-KH-24.4040-KH-24_0_filtered_R1_val_1.fq -2 4040-KH-24.4040-KH-24_0_filtered_R2_val_2.fq  -S aligned_genome_sequences24.sam
+    bowtie2 -x mouse -1 4040-KH-25.4040-KH-25_0_filtered_R1_val_1.fq -2 4040-KH-25.4040-KH-25_0_filtered_R2_val_2.fq  -S aligned_genome_sequences25.sam
 }
 
 
