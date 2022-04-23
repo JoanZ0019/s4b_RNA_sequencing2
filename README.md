@@ -26,8 +26,8 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
 [**Environment and Usage**](#environment-and-usage)  
 [**Steps and functions**](#steps-and-functions)  
   1. Check the quality of the reads using function: [FASTQC_raw](#FASTQC-raw)
-  2. Clean reads using function: [trim_read](#trim-read)  
-  3. Check the quality of the trimmed reads using function: [qc_trimmed](#qc-trimmed)
+  2. Clean reads using function: [trim_reads](#trim-reads)  
+  3. Check the quality of the trimmed reads using function: [FASTQC_trimmed](#FASTQC-trimmed)
   4. Mapping the genome using function: [mapping](#mapping)
    
 
@@ -93,18 +93,18 @@ in a web browser. |
 ![](README_images/quality_check_output_html_file.png)
 
 ## Step 2.
-### trim-read 
+### trim-reads 
 | [Description](#description-1) | [Usage](#usage-1) | [Input Format](#input-format-1) | [Output Format](#output-format-1) |
 |---|---|---|---|
 
 ### Description
-`trim_read` requires to load `trimgalore` module, which will automatically detect and cut sequences at illumina adapters
+`trim_reads` requires to load `trimgalore` module, which will automatically detect and cut sequences at illumina adapters
 ### Usage
 
-Running the `trim_read` function requires an output path. 
+Running the `trim_reads` function requires an output path. 
 
 ```
-$ trim_read /home/asc_account/path_to_your_output_folder  
+$ trim_reads /home/asc_account/path_to_your_output_folder  
 ``` 
 Using module `trimgalore` requires `--paired`, `--output_dir`, path_of_output_folder, paired_input_files. TrimGalore was struggling to pair files, so this had to be <ins>hard coded</ins> for **each pair**.
 ```
@@ -129,18 +129,18 @@ Output is `trimming_report.txt` and `val_1.fq.gz` files. It can be downloaded fr
 in a web browser. 
 
 ## Step 3.
-### qc-trimmed 
+### FASTQC-trimmed 
 | [Description](#description-2) | [Usage](#usage-2) | [Input Format](#input-format-2) | [Output Format](#output-format-2) |
 |---|---|---|---|
 
 ### Description
-`qc-trimmed` load `fastqc` module to check quality of the trimmed reads 
+`FASTQC_trimmed` load `fastqc` module to check quality of the trimmed reads 
 ### Usage
 
-Running the `qc-trimmed` function requires an output path. 
+Running the `FASTQC_trimmed` function requires an output path. 
 
 ```
-$ qc-trimmed /home/asc_account/path_to_your_output_folder 
+$ FASTQC_trimmed /home/asc_account/path_to_your_output_folder 
 ``` 
 Using module `fastqc` requires input files, `-o` output_folder, and an output folder 
 ```
