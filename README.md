@@ -177,6 +177,7 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 |line4|The base call quality scores.|
 ### Output Format
 #### In terminal
+<img width="533" alt="FASTQC_trimmed_Terminal_output" src="https://user-images.githubusercontent.com/91216328/164949992-e4a3b13b-82d4-40bc-b423-522693de91e7.png">
 
 **[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)**
 
