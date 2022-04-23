@@ -48,12 +48,11 @@ function FASTQC_raw {
 
         mkdir fastqc_results #make a new directory for output files
         cd Case #move into the directory with the fastq files
-        fastqc *.fastq.gz -o ~/s4b-project/RNASeq_Data/fastqc_results #Use FastQC to perform a quality check of sequences (###Adjust the path of the output to your path on your system)
+        fastqc *.fastq.gz -o ~/s4b-project/RNASeq_Data/fastqc_results #Use FastQC to perform a quality check of sequences (#Adjust the path of the output to your path on your system)
         cd ../Control #move into directory with the control fastq files
-        fastqc *.fastq.gz -o ~/s4b-project/RNASeq_Data/fastqc_results #Use FastQC to perform a quality check of sequences (###Adjust the path of the output to your path on your system)
+        fastqc *.fastq.gz -o ~/s4b-project/RNASeq_Data/fastqc_results #Use FastQC to perform a quality check of sequences (#Adjust the path of the output to your path on your system)
 
 }
-
 
 #------------------Step 2 - TrimGalore! to trim the sequences --------------------
 """
@@ -136,21 +135,24 @@ function INDEX_genome {
     
     The set-up of the indexing script is:
         bowtie2-build [options]* <reference_in> <bt2_base>
-    where bowtie2-build is the main command, -f means that the reference_in is a FASTA file, GRCm39.genome.fa is the reference genome. bt2_base is the base name for the output files. We used 'mouse' as the base name since this is the mouse genome. The output files will be 'mouse.1.bt2' 'mouse.2.bt2' 'mouse.3.bt2' 'mouse.4.bt2' 'mouse.rev.1.bt2' and 'mouse.rev.2.bt2'. These files will be used for the next alignment step. 
+    where bowtie2-build is the main command, -f means that the reference_in is a FASTA file, GRCm39.genome.fa is the reference genome. bt2_base is the base name for the output files. We used 'mouse' as the base name since this is the mouse genome. The output files will be 'mouse.1.bt2' 'mouse.2.bt2' 'mouse.3.bt2' 'mouse.4.bt2' 'mouse.rev.1.bt2' and 'mouse.rev.2.bt2'. These files will be used for the next alignment step.
     
     """
 
+    #----------------------------------------------------------------------------------------------------------
     
-    
-    #!/bin/bash
     source /opt/asn/etc/asn-bash-profiles-special/modules.sh
     module load bowtie2/2.2.9
-
+    
+    
+    
     bowtie2-build -f GRCm39.genome.fa mouse
     
 }
 
 
+
+#------------------------Step 5 - Align FASTQ Files to the Indexed Genome ------------------------------------------------
 
 
 
