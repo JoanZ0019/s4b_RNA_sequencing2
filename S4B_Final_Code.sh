@@ -104,12 +104,12 @@ The purpose of running FASTQC is to check the quality of the reads as well as to
 Packages needed for this step -FASTQC. If running on the Alabama Super Computer you need to make sure the 'module load fastqc/0.11.9' is in your script or else it will not run.
 """
 function FASTQC_trimmed {
-
-        #input files: *.fastq.gz in ~/s4b-project/RNASeq_Data/trimmed_reads/Case and ../Control - hardcoded here, but this can be customized by the user.
-        #output files: *.html to be viewed in a web browser and *.zip
+        """
+        input files: *.fastq.gz in ~/s4b-project/RNASeq_Data/trimmed_reads/Case and ../Control - hardcoded here, but this can be customized by the user.
+        output files: *.html to be viewed in a web browser and *.zip
                 #This file will be located in ~/s4b-project/RNASeq_Data/TrimmedReads/trimmed-FastQC as specified in the code. This can be modified by the user if they need.
-        #Packages: FastQC
-
+        Packages: FastQC
+        """
         #----------------------------------------------------------------------------------------
 
         module load fastqc/0.11.9 #loading the fastqc module from ASC
@@ -125,19 +125,23 @@ function FASTQC_trimmed {
 
 #-----------------------Step 4 - Index the Reference Genome for Alignment ----------------------------------
 """
-The purpose of indexing the reference genome is to allow the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process.
+The purpose of indexing the reference genome is to allow the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process. For more information regarding the bowtie2 program, please check out the manual: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs
 
 """
 
 function INDEX_genome {
 
     """
+    #GRCm39.genome.fa - reference genome
     
+    The set-up of the indexing script is:
+        bowtie2-build [options]* <reference_in> <bt2_base>
+    where bowtie2-build is the main command, -f means that the input file is a FASTA file,
+    
+    
+    http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs
     """
 
-    #GRCm39.genome.fa - genome
-    #
-    #bowtie2-build [options]* <reference_in> <bt2_base>
     
     
     #!/bin/bash
