@@ -247,9 +247,9 @@ $ bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14
 |`-2`|`2.fq`| Comma-separated list of files containing mate 2s (filename usually includes _2), e.g. -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq|
 |`-S`|`.sam`| File to write SAM alignments to.|
 ### Input Format
-**[Sample input file](sample_data/trimmes/.fq)** 
+**e.g. 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq** 
 ### Output Format
-**[Sample output file](sample_data/)**
+**[Sample output file](sample_data/Aligning_Reads_output/aligned_genome_sequences14.sam.zip)** The output file format is `.sam`, in order to upload to Github, compressed **.sam** to **.sam.zip**.
 
 ## Box Folder
 
