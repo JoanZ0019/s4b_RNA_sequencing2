@@ -249,7 +249,7 @@ $ bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14
 ### Input Format
 **e.g. 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq** 
 ### Output Format
-**[Sample output file](sample_data/Aligning_Reads_output/aligned_genome_sequences14.sam.zip)** The output file format is `.sam`, in order to upload to Github, compressed **.sam** to **.sam.zip**.
+**[Sample output file](sample_data/Aligning_Reads_output/aligned_genome_sequences14.sam.zip)** The output file format is `.sam`, in order to upload to Github, compressed **.sam** to **.sam.zip**
 
 ## Box Folder
 
