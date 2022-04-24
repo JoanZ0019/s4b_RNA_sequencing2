@@ -183,7 +183,8 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 <img width="533" alt="FASTQC_trimmed_Terminal_output" src="https://user-images.githubusercontent.com/91216328/164949992-e4a3b13b-82d4-40bc-b423-522693de91e7.png">
 
 Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)** showed better quality scores after trimmed and it can be downloaded from ASC to local and viewe in a web browser. 
-![](README_images/trimmed_quality_check_output_html_file.png)
+![Screen Shot 2022-04-21 at 10 52 28 PM](https://user-images.githubusercontent.com/91216328/164999326-d826a88f-b250-4890-b051-20bc107001be.png)
+
 ## Step 4.
 ### Index-genome
 | [Description](#description-3) | [Usage](#usage-3) | [Input Format](#input-format-3) | [Output Format](#output-format-3) |
