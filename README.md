@@ -105,8 +105,8 @@ $ fastqc path_of_the_folder/*.fastq.gz -o path_of_output_folder
 
 **[Sample output file](sample_data/quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_fastqc.html)**
 
-|   |Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
-in a web browser. |
+Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
+in a web browser. 
 ![](README_images/quality_check_output_html_file.png)
 
 ## Step 2.
@@ -179,10 +179,9 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 #### In terminal
 <img width="533" alt="FASTQC_trimmed_Terminal_output" src="https://user-images.githubusercontent.com/91216328/164949992-e4a3b13b-82d4-40bc-b423-522693de91e7.png">
 
-**[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)**
 
-|   |Output `.html` file attached below and it can be downloaded from ASC to local and viewed
-in a web browser. |
+
+Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)** showed better quality scores after trimmed and it can be downloaded from ASC to local and viewe in a web browser. 
 ![](README_images/trimmed_quality_check_output_html_file.png)
 ## Step 4.
 ### mapping
