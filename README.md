@@ -33,7 +33,8 @@ These analyses will consist of RNA-seq data extracted from the common mouse spec
   1. Check the quality of the reads using function: [FASTQC_raw](#FASTQC-raw)
   2. Clean reads using function: [trim_reads](#trim-reads)  
   3. Check the quality of the trimmed reads using function: [FASTQC_trimmed](#FASTQC-trimmed)
-  4. Mapping the genome using function: [mapping](#mapping)
+  4. Index the genome using function: [Index_genome](#Index-genome)
+  5. Align reads using function: [Aligning_Reads](#Aligning-Reads)
    
 
 # Environment and Usage
@@ -77,7 +78,7 @@ https://user-images.githubusercontent.com/91216328/164944932-936fce64-9bba-45df-
 |---|---|---|---|
 
 ### Description
-`quality_check` is a first essential step in bioinformatics analysis of RNA-Seq data because sequencing errors and contaminations may be introduced into the raw data during the library preparation, sequencing and base calling steps. This function needs to load `fastqc` module. 
+Quality check is a first essential step in bioinformatics analysis of RNA-Seq data because sequencing errors and contaminations may be introduced into the raw data during the library preparation, sequencing and base calling steps. The purpose of `FASTQC-raw` is to check the quality of the reads as well as to identify the adaptor type used for sequencing. This function needs to load `fastqc` module. 
 ### Usage
 
 Running the `FASTQC-raw` function requires an output path. 
@@ -116,7 +117,8 @@ in a web browser.
 |---|---|---|---|
 
 ### Description
-`trim_reads` requires to load `trimgalore` module, which will automatically detect and cut sequences at illumina adapters
+`trim_reads` requires to load `trimgalore` module, which will automatically detect and cut sequences at illumina adapters. Using the data from `FASTQC-raw` we are able to identify the quality of the sequence reads as well as the adaptor sequence used.  It may be necessary to trim additional sequences if the reads are lower.
+
 ### Usage
 
 Running the `trim_reads` function requires an output path. 
@@ -185,28 +187,50 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)** showed better quality scores after trimmed and it can be downloaded from ASC to local and viewe in a web browser. 
 ![](README_images/trimmed_quality_check_output_html_file.png)
 ## Step 4.
-### mapping
+### Index-genome
 | [Description](#description-3) | [Usage](#usage-3) | [Input Format](#input-format-3) | [Output Format](#output-format-3) |
 |---|---|---|---|
 
 ### Description
-`mapping` load `star` module
+`Index_genome` used for Indexing the reference genome allowing the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process. For more information regarding the bowtie2 program, please check out the manual: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs
 ### Usage
 
-Running the `mapping` function requires an output path. 
+Running the `bowtie` function requires an output path. `-f` a FASTA file, base name for outputfiles
 
 ```
-$ mapping /home/asc_account/path_to_your_folder  
+$  bowtie2-build [options]* <reference_in> <bt2_base>
+$  bowtie2-build -f GRCm39.genome.fa mouse
 ``` 
-Using module `star` requires input files, `-o` output_folder, and an output folder 
+
+### Input Format
+**[Sample input file](sample_data/)**
+### Output Format
+**[Sample output file](sample_data/)** These files will be used for the next alignment step.
+
+## Step 5.
+### Aligning-Reads
+| [Description](#description-4) | [Usage](#usage-4) | [Input Format](#input-format-4) | [Output Format](#output-format-4) |
+|---|---|---|---|
+
+### Description
+`Aligning_Reads` used for aligning FASTQ files to the indexed genome
+### Usage
+
+Running the `Aligning_Reads` function requires an output path. 
+
 ```
-$ STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /home/aubars001/s4b-project/RNASeq_Data/Genome/Mapped --genomeFastaFiles /home/aubars001/s4b-project/RNASeq_Data/Genome/GCA_000001635.9_GRCm39_genomic.fna --sjdbGTFfile /home/aubars001/s4b-project/RNASeq_Data/Genome/GCA_000001635.9_GRCm39_genomic.gtf --sjdbOverhang 99
+$   
+``` 
+Using module `bowtie` requires input files, `-o` output_folder, and an output folder 
+```
+$ 
 	
 ```
 ### Input Format
 **[Sample input file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
 ### Output Format
 **[Sample output file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
+
 ## Box Folder
 
 Here is the link to the Box Folder with our data: https://auburn.box.com/s/x17154cah63h3yp4wd14ak6p0fa3t5jz
