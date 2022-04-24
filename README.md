@@ -214,8 +214,8 @@ $  bowtie2-build -f GRCm39.genome.fa mouse
 $ gzip -d GRCm39.genome.fa.gz
 ```
 ### Output Format
-**[Sample output file](sample_data/)** These files will be used for the next alignment step.
-<img width="554" alt="INDEX_genome_terminal_output" src="https://user-images.githubusercontent.com/91216328/164953095-a473e763-48eb-446b-96a3-a7063caa31be.png">
+**[Sample output file](sample_data/Index_output/mouse.3.bt2)** These files will be used for the next alignment step.
+
 
 ## Step 5.
 ### Aligning-Reads
