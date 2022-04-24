@@ -225,6 +225,10 @@ $ gzip -d GRCm39.genome.fa.gz
 `Aligning_Reads` used for aligning FASTQ files to the indexed genome. it repuried `tophat` module and `bowtie2`
 ### Usage
 
+- Before run `Aligning_Reads`, unzip trimmed reads if needed to make sure input files are **.fq** format.
+```
+gzip -d  *fq.gz
+```
 Running the `Aligning_Reads` function requires an output path. 
 
 ```
@@ -243,7 +247,7 @@ $ bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14
 |`-2`|`2.fq`| Comma-separated list of files containing mate 2s (filename usually includes _2), e.g. -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq|
 |`-S`|`.sam`| File to write SAM alignments to.|
 ### Input Format
-**[Sample input file](sample_data/)**
+**[Sample input file](sample_data/trimmes/.fq)** 
 ### Output Format
 **[Sample output file](sample_data/)**
 
