@@ -231,14 +231,14 @@ Running the `Aligning_Reads` function requires an output path.
 ```
 $   
 ``` 
-Using module `bowtie` requires input files, `-o` output_folder, and an output folder. `$ bowtie2 [options]* -x <bt2-idx> {-1 <m1> -2 <m2> | -U <r> | --interleaved <i> | --sra-acc <acc> | b <bam>} -S [<sam>]` 
+Using module `bowtie` requires input files, `-o` output_folder, and an output folder. `$ bowtie2 [options]* -x <bt2-idx> {-1 <m1> -2 <m2> } -S [<sam>]` 
 ```
 $ bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq  -S aligned_genome_sequences14.sam
 	
 ```
 ##### Arguments
 |||Description|
-|:-:| --------- |:--|
+|:-:| --- |:--|
 |`-x`|`bt2-idx`| The basename of the index for the reference genome.|
 |`-1`|`1.fq   `| Comma-separated list of files containing mate 1s (filename usually includes _1), e.g. -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq|
 |`-2`|`2.fq   `| Comma-separated list of files containing mate 2s (filename usually includes _1), e.g. -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq|
