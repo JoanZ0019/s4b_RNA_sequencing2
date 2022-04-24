@@ -51,6 +51,7 @@ function FASTQC_raw {
         fastqc *.fastq.gz -o ~/s4b-project/RNASeq_Data/fastqc_results #Use FastQC to perform a quality check of sequences (#Adjust the path of the output to your path on your system)
         cd ../Control #move into directory with the control fastq files
         fastqc *.fastq.gz -o ~/s4b-project/RNASeq_Data/fastqc_results #Use FastQC to perform a quality check of sequences (#Adjust the path of the output to your path on your system)
+        echo "FASTQC on Raw Sequences Finished"
 
 }
 
@@ -85,7 +86,8 @@ function trim_reads {
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Case 4040-KH-23.4040-KH-23_0_filtered_R1.fastq.gz 4040-KH-23.4040-KH-23_0_filtered_R2.fastq.gz
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Case 4040-KH-24.4040-KH-24_0_filtered_R1.fastq.gz 4040-KH-24.4040-KH-24_0_filtered_R2.fastq.gz
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Case 4040-KH-25.4040-KH-25_0_filtered_R1.fastq.gz 4040-KH-25.4040-KH-25_0_filtered_R2.fastq.gz
-
+        echo "Done trimming Case files ... changing over to control"
+        
         cd ../Control #move into directory with the control fastq files
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Control 4040-KH-1.4040-KH-1_0_filtered_R1.fastq.gz 4040-KH-1.4040-KH-1_0_filtered_R2.fastq.gz
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Control 4040-KH-4.4040-KH-4_0_filtered_R1.fastq.gz 4040-KH-4.4040-KH-4_0_filtered_R2.fastq.gz
@@ -93,6 +95,7 @@ function trim_reads {
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Control 4040-KH-6.4040-KH-6_0_filtered_R1.fastq.gz 4040-KH-6.4040-KH-6_0_filtered_R2.fastq.gz
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Control 4040-KH-17.4040-KH-17_0_filtered_R1.fastq.gz 4040-KH-17.4040-KH-17_0_filtered_R2.fastq.gz
         trim_galore --paired --output_dir ~/s4b-project/RNASeq_Data/trimmed_reads/Control 4040-KH-18.4040-KH-18_0_filtered_R1.fastq.gz 4040-KH-18.4040-KH-18_0_filtered_R2.fastq.gz
+        echo "Done trimming Control files ... re-running FASTQC"
         
         }
  
@@ -119,6 +122,7 @@ function FASTQC_trimmed {
         fastqc *.fq.gz -o ~/s4b-project/RNASeq_Data/trimmed_reads/fastqc_results_trimgalore #Use FastQC to perform a quality check of sequences
         cd ../Control #move into directory with the control fastq files
         fastqc *.fq.gz -o ~/s4b-project/RNASeq_Data/trimmed_reads/fastqc_results_trimgalore #Use FastQC to perform a quality check of sequences
+        echo "Finished running FASTQC on trimmed data ... moving on to index the reference genome"
 }
 
 
@@ -147,6 +151,8 @@ function INDEX_genome {
     module load bowtie2/2.2.9
     
     bowtie2-build -f GRCm39.genome.fa mouse
+    
+    echo "Finished indexing the reference genome ... moving on to align FASTQ Files"
     
 }
 
@@ -189,6 +195,8 @@ function Aligning_Reads {
     bowtie2 -x mouse -1 4040-KH-23.4040-KH-23_0_filtered_R1_val_1.fq -2 4040-KH-23.4040-KH-23_0_filtered_R2_val_2.fq  -S aligned_genome_sequences23.sam
     bowtie2 -x mouse -1 4040-KH-24.4040-KH-24_0_filtered_R1_val_1.fq -2 4040-KH-24.4040-KH-24_0_filtered_R2_val_2.fq  -S aligned_genome_sequences24.sam
     bowtie2 -x mouse -1 4040-KH-25.4040-KH-25_0_filtered_R1_val_1.fq -2 4040-KH-25.4040-KH-25_0_filtered_R2_val_2.fq  -S aligned_genome_sequences25.sam
+    
+    echo "Finished aligning to the genome, output shoulw be .sam files"
 }
 
 
@@ -203,7 +211,7 @@ function main {
     
 }
 
-#--------------------------------------------Final Test ------------------------------------------------------
+#--------------------------------------------Final Test ------------------------------------
 
 echo "Starting RNA Sequencing"
 
