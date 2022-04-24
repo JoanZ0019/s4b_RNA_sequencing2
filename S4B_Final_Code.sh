@@ -60,13 +60,13 @@ The purpose of running TrimGalore! is to trim the adaptor sequences used for seq
 Packages needed : trimgalore and anaconda
 """
 function trim_reads {
-
-        #input files: *.fastq.gz in ~/s4b-project/RNASeq_Data/Case and ../Control - hardcoded here, but this can be customized by the user.
-        #output files: *val_1.fq.gz (for R1) or *val_2.fq.gz (for R2) files
+        """
+        #Input files needed: *.fastq.gz in ~/s4b-project/RNASeq_Data/Case and ../Control - hardcoded here, but this can be customized by the user.
+        #Output files needed: *val_1.fq.gz (for R1) or *val_2.fq.gz (for R2) files
                 #These files will be located in ~/s4b-project/RNASeq_Data/trimmed_reads
-        #packages: trimgalore
+        #Packages: trimgalore
                 #trimgalore will automatically detect and cut sequences at Illumina adapters
-
+        """
         #---------------------------------------------------------------------------------------
 
         module load trimgalore/0.6.6 #loading trimgalore module from ASC
@@ -131,11 +131,13 @@ The purpose of indexing the reference genome is to allow the aligner to narrow d
 function INDEX_genome {
 
     """
-    #GRCm39.genome.fa - reference genome
+    #Input File: GRCm39.genome.fa - reference genome
+    #Output Files: 'mouse.1.bt2' 'mouse.2.bt2' 'mouse.3.bt2' 'mouse.4.bt2' 'mouse.rev.1.bt2' and 'mouse.rev.2.bt2'
+    #Packages: bowtie2
     
     The set-up of the indexing script is:
         bowtie2-build [options]* <reference_in> <bt2_base>
-    where bowtie2-build is the main command, -f means that the reference_in is a FASTA file, GRCm39.genome.fa is the reference genome. bt2_base is the base name for the output files. We used 'mouse' as the base name since this is the mouse genome. The output files will be 'mouse.1.bt2' 'mouse.2.bt2' 'mouse.3.bt2' 'mouse.4.bt2' 'mouse.rev.1.bt2' and 'mouse.rev.2.bt2'. These files will be used for the next alignment step.
+    where bowtie2-build is the main command, -f means that the reference_in is a FASTA file, GRCm39.genome.fa is the reference genome. bt2_base is the base name for the output files. We used 'mouse' as the base name since this is the mouse genome. The output files will be used for the next alignment step.
     
     """
 
@@ -143,8 +145,6 @@ function INDEX_genome {
     
     source /opt/asn/etc/asn-bash-profiles-special/modules.sh
     module load bowtie2/2.2.9
-    
-    
     
     bowtie2-build -f GRCm39.genome.fa mouse
     
@@ -154,13 +154,13 @@ function INDEX_genome {
 
 #------------------------Step 5 - Align FASTQ Files to the Indexed Genome ------------------------------------------------
 """
-Talk about aligning reads and outout files .......
-http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs for
+The fifth step is to align trimmed FASTQ files to the new indexed genome. This allows for the ability to identify the specific region in the genome that each base pair in the sequence reads originate from. To align our FASTQ files to the indexed genome we generated in step 4, we will also use the bowtie2 program. Specific documentation for this program can be found in the link below. 
+http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs 
 """
 
 function Aligning_Reads {
     """
-    define function
+    Alignes FASTQ files to the indexed genome generated in the INDEX_genome function. In
     
     
     """
@@ -186,6 +186,8 @@ function Aligning_Reads {
     bowtie2 -x mouse -1 4040-KH-25.4040-KH-25_0_filtered_R1_val_1.fq -2 4040-KH-25.4040-KH-25_0_filtered_R2_val_2.fq  -S aligned_genome_sequences25.sam
 }
 
+
+#---------------------------------Running All of the Functions -----------------------------
 
 function main {
     FASTQC_raw home/aubemw001/s4b-project/RNASeq_Data
