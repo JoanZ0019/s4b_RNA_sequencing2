@@ -229,7 +229,7 @@ $ gzip -d GRCm39.genome.fa.gz
 Running the `Aligning_Reads` function requires an output path. 
 
 ```
-$   
+$  Aligning_Reads /home/asc_account/path_to_your_output_folder 
 ``` 
 Using module `bowtie` requires input files, `-o` output_folder, and an output folder. `$ bowtie2 [options]* -x <bt2-idx> {-1 <m1> -2 <m2> } -S [<sam>]` 
 ```
@@ -244,9 +244,9 @@ $ bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14
 |`-2`|`2.fq`| Comma-separated list of files containing mate 2s (filename usually includes _2), e.g. -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq|
 |`-S`|`.sam`| File to write SAM alignments to.|
 ### Input Format
-**[Sample input file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
+**[Sample input file](sample_data/)**
 ### Output Format
-**[Sample output file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
+**[Sample output file](sample_data/)**
 
 ## Box Folder
 
