@@ -5,7 +5,7 @@ Next generation sequencing has provided opportunities to understand the molecula
 In this script we will first assess the quality of the reads through FASTQC to identify the adaptor sequence to remove. We will then use TrimGalore! to remove the adaptor sequence and re-run FASTQC to ensure that the data was trimmed properly. Next, we need to index the reference genome (provided by the link above) to prepare for alignment. After indexing, the script aligns the trimmed sequences (fastq files) to the reference genome.
 
 You will need the following in order to run the script:
-- raw FASTA files
+- Raw FASTA files
 - Reference Genome (Genome sequence (GRCm39) (FASTA format)
     -- (we used the reference genome from https://www.gencodegenes.org/mouse/)
 - Comprehensive gene annotation (GTF or GFF3 format)
@@ -182,8 +182,6 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 #### In terminal
 <img width="533" alt="FASTQC_trimmed_Terminal_output" src="https://user-images.githubusercontent.com/91216328/164949992-e4a3b13b-82d4-40bc-b423-522693de91e7.png">
 
-
-
 Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)** showed better quality scores after trimmed and it can be downloaded from ASC to local and viewe in a web browser. 
 ![](README_images/trimmed_quality_check_output_html_file.png)
 ## Step 4.
@@ -215,7 +213,8 @@ $ gzip -d GRCm39.genome.fa.gz
 ```
 ### Output Format
 **[Sample output file](sample_data/Index_output/mouse.3.bt2)** These files will be used for the next alignment step.
-
+#### In terminal
+<img width="543" alt="INDEX_genome_Terminal_output" src="https://user-images.githubusercontent.com/91216328/164957447-06abd33a-844f-4465-b40d-ad9bf16b042c.png">
 
 ## Step 5.
 ### Aligning-Reads
