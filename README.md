@@ -195,10 +195,14 @@ Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_out
 `Index_genome` used for Indexing the reference genome allowing the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process. For more information regarding the bowtie2 program, please check out the manual: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs
 ### Usage
 
-Running the `bowtie` function requires an output path. `-f` a FASTA file, base name for outputfiles
+Running the `Index-genme` function requires an output path.
 
 ```
-$  bowtie2-build [options]* <reference_in> <bt2_base>
+$  Index_genome /home/asc_account/path_to_your_output_folder
+``` 
+Using module reuqires `bowtie2` module.`$  bowtie2-build [options]* <reference_in> <bt2_base>` requires an output path. `-f` a FASTA file, base name for outputfiles
+
+```
 $  bowtie2-build -f GRCm39.genome.fa mouse
 ``` 
 
@@ -213,7 +217,7 @@ $  bowtie2-build -f GRCm39.genome.fa mouse
 |---|---|---|---|
 
 ### Description
-`Aligning_Reads` used for aligning FASTQ files to the indexed genome
+`Aligning_Reads` used for aligning FASTQ files to the indexed genome. it repuried `tophat` module and `bowtie2`
 ### Usage
 
 Running the `Aligning_Reads` function requires an output path. 
