@@ -238,12 +238,10 @@ $ bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14
 ```
 ##### Arguments
 |||Description|
-|:-:|:-:|:-:|
+|:-:|:-:|:--|
 |`-x`|`bt2-idx`| The basename of the index for the reference genome.|
-|`-1`|`1.fq`| Comma-separated list of files containing mate 1s (filename usually includes _1), 
-e.g. -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq|
-|`-2`|`2.fq`| Comma-separated list of files containing mate 2s (filename usually includes _1), 
-e.g. -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq|
+|`-1`|`1.fq`| Comma-separated list of files containing mate 1s (filename usually includes _1), e.g. -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq|
+|`-2`|`2.fq`| Comma-separated list of files containing mate 2s (filename usually includes _1), e.g. -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq|
 |`-S`|`.sam`| File to write SAM alignments to.|
 ### Input Format
 **[Sample input file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
