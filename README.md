@@ -194,7 +194,7 @@ Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_out
 ### Description
 `Index_genome` used for Indexing the reference genome allowing the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process. For more information regarding the bowtie2 program, please check out the manual: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs 
 
-- You need download the **reference genome: GRCm39** ***FASTA format*** from [https://www.gencodegenes.org/mouse/](https://www.gencodegenes.org/mouse/), and upload to ASC to run this function.
+
 ### Usage
 
 Running the `Index-genme` function requires an output path.
@@ -208,10 +208,14 @@ Using module reuqires `bowtie2` module.`$  bowtie2-build [options]* <reference_i
 $  bowtie2-build -f GRCm39.genome.fa mouse
 ``` 
 
-### Input Format
-**[Sample input file](sample_data/)**
+### Input Format 
+- You need download the **reference genome: GRCm39** ***FASTA format*** from [https://www.gencodegenes.org/mouse/](https://www.gencodegenes.org/mouse/), and upload to ASC to run this function. Unzip the `.gz` file to `.fa` file in the output folder.
+``` 
+$ gzip -d GRCm39.genome.fa.gz
+```
 ### Output Format
 **[Sample output file](sample_data/)** These files will be used for the next alignment step.
+<img width="554" alt="INDEX_genome_terminal_output" src="https://user-images.githubusercontent.com/91216328/164953095-a473e763-48eb-446b-96a3-a7063caa31be.png">
 
 ## Step 5.
 ### Aligning-Reads
@@ -227,11 +231,18 @@ Running the `Aligning_Reads` function requires an output path.
 ```
 $   
 ``` 
-Using module `bowtie` requires input files, `-o` output_folder, and an output folder 
+Using module `bowtie` requires input files, `-o` output_folder, and an output folder. `$ bowtie2 [options]* -x <bt2-idx> {-1 <m1> -2 <m2> | -U <r> | --interleaved <i> | --sra-acc <acc> | b <bam>} -S [<sam>]` 
 ```
-$ 
+$ bowtie2 -x mouse -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq  -S aligned_genome_sequences14.sam
 	
 ```
+##### Arguments
+|||Description|
+|:-:|:-:|:-:|
+|`-x`|`bt2-idx`| The basename of the index for the reference genome.|
+|`-1`|`1.fq`| Comma-separated list of files containing mate 1s (filename usually includes _1), e.g. -1 4040-KH-14.4040-KH-14_0_filtered_R1_val_1.fq|
+|`-2`|`2.fq`| Comma-separated list of files containing mate 2s (filename usually includes _1), e.g. -2 4040-KH-14.4040-KH-14_0_filtered_R2_val_2.fq|
+|`-S`|`.sam`| File to write SAM alignments to.|
 ### Input Format
 **[Sample input file](sample_data/TrimmedReads/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fq.gz)**
 ### Output Format
