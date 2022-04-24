@@ -175,9 +175,9 @@ function Aligning_Reads {
     
     #Unzip trimmed reads fq.gz file to .fq file
     cd ~/s4b_project/trimmed_reads/Case
-    gzip -dk *.fq.gz
+    gzip -d *.fq.gz
     cd ~/s4b_project/trimmed_reads/Case
-    gzip -dk *.fq.gz
+    gzip -d *.fq.gz
     
     cd ~/s4b_project/index # output file saved in 'index' folder
     #needed to hardcode the file names in order to get it to run
