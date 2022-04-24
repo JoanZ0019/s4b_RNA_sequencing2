@@ -160,8 +160,13 @@ http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs
 
 function Aligning_Reads {
     """
-    Alignes FASTQ files to the indexed genome generated in the INDEX_genome function. In
+    Alignes FASTQ files to the indexed genome generated in the INDEX_genome function. 
+    Input files - paired trimmed fastq files 
+    Output files - *.sam files that you can name. These files are quite large.
+    Packages needed: bowtie2 and tophat
     
+    Command for alignment step - 
+    bowtie2 -x <bt2-idx> -1 <m1> -2 <m2> -S [<sam>]  -- where -x is the base name for the inde of the reference genome, mouse is the base name of the indexed genome, -1 SAMPLEID_R1*.fq is read 1, -2 SAMPLEID_R2*.fq is read 2, -S is the file to write SAM alignments to, and aligned_genome_sequence*.sam is the output file 
     
     """
     source /opt/asn/etc/asn-bash-profiles-special/modules.sh
