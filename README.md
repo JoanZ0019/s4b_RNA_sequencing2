@@ -5,10 +5,10 @@ Next generation sequencing has provided opportunities to understand the molecula
 In this script we will first assess the quality of the reads through FASTQC to identify the adaptor sequence to remove. We will then use TrimGalore! to remove the adaptor sequence and re-run FASTQC to ensure that the data was trimmed properly. Next, we need to index the reference genome (provided by the link above) to prepare for alignment. After indexing, the script aligns the trimmed sequences (fastq files) to the reference genome.
 
 You will need the following in order to run the script:
--raw FASTA files
--Reference Genome (Genome sequence (GRCm39) (FASTA format)
+- raw FASTA files
+- Reference Genome (Genome sequence (GRCm39) (FASTA format)
     -- (we used the reference genome from https://www.gencodegenes.org/mouse/)
--Comprehensive gene annotation (GTF or GFF3 format)
+- Comprehensive gene annotation (GTF or GFF3 format)
     -- can also be found on https://www.gencodegenes.org/mouse/
 
 FUTURE STEPS:
