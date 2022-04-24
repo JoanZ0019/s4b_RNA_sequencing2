@@ -107,7 +107,8 @@ $ fastqc path_of_the_folder/*.fastq.gz -o path_of_output_folder
 
 Output is  a `.html` file with the following columns. It can be downloaded from ASC to local and viewed
 in a web browser. 
-![](README_images/quality_check_output_html_file.png)
+![quality_check_output_html_file](https://user-images.githubusercontent.com/91216328/164950156-f61e6b45-b0b8-4c8f-a395-a6af05f181a3.png)
+
 
 ## Step 2.
 ### trim-reads 
