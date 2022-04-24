@@ -220,7 +220,7 @@ $ gzip -d GRCm39.genome.fa.gz
 |---|---|---|---|
 
 ### Description
-`Aligning_Reads` used for aligning FASTQ files to the indexed genome. it repuried `tophat` module and `bowtie2`
+`Aligning_Reads` used for aligning FASTQ files to the indexed genome. It requries `tophat` module and `bowtie2`
 ### Usage
 
 - Before run `Aligning_Reads`, unzip trimmed reads if needed to make sure input files are **.fq** format.
