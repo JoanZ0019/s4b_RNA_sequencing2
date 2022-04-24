@@ -194,7 +194,7 @@ Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_out
 ### Description
 `Index_genome` used for Indexing the reference genome allowing the aligner to narrow down the potential origin of a sequence within the genome. This process helps to speed up the alignment process. For more information regarding the bowtie2 program, please check out the manual: http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#paired-inputs 
 
-You need the reference genome **GRCm39** *_FASTA format*_ from [https://www.gencodegenes.org/mouse/](https://www.gencodegenes.org/mouse/)
+You need the reference genome **GRCm39** ***FASTA format*** from [https://www.gencodegenes.org/mouse/](https://www.gencodegenes.org/mouse/)
 ### Usage
 
 Running the `Index-genme` function requires an output path.
