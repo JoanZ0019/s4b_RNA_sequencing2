@@ -227,7 +227,7 @@ $ gzip -d GRCm39.genome.fa.gz
 
 - Before run `Aligning_Reads`, unzip trimmed reads if needed to make sure input files are **.fq** format.
 ```
-gzip -dk  *fq.gz
+gzip -d  *fq.gz
 ```
 Running the `Aligning_Reads` function requires an output path. 
 
