@@ -71,8 +71,7 @@ $ unzip path_of_files
 ```
 
 
-https://user-images.githubusercontent.com/91216328/165153297-62dfa077-cda1-4077-8b52-afe0598bcfbd.mp4
-
+https://user-images.githubusercontent.com/91216328/165153874-fd982ec0-3c91-4cff-8192-e2e3b03871ef.mp4
 
 
 # Steps and functions
