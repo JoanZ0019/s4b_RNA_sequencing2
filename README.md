@@ -14,6 +14,10 @@ You will need the following in order to run the script:
 FUTURE STEPS:
 After finishing this script, the data is ready to be used to identify differentially expressed genes through programs like DEseq
 
+## Citing
+RNA_sequencing2 can be cited as:
+
+Hoek KL, Greer MJ, McClanahan KG, Nazmi A, Piazuelo MB, Singh K, Wilson KT, Olivares-Villagómez D. Granzyme B prevents aberrant IL-17 production and intestinal pathogenicity in CD4+ T cells. Mucosal Immunol. 2021 Sep;14(5):1088-1099. doi: 10.1038/s41385-021-00427-1. Epub 2021 Jun 28. PMID: 34183776; PMCID: PMC8380717.https://pubmed.ncbi.nlm.nih.gov/34183776/
 
 ## Project Objectives
 
@@ -51,12 +55,10 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 ```
 - Once you login, **submit** jobs to ASC to run your scripts
 
-```  
+https://user-images.githubusercontent.com/91216328/165161773-68bc487c-bf31-4309-837e-9c2acddfd834.mp4
 
 
-https://user-images.githubusercontent.com/91216328/164949011-7358eb93-f115-46cb-a49a-2960e5687bc9.mp4
-
-
+```
 $ chmod +x my_scripts
 $ run_script my_scripts
 ``` 
@@ -69,7 +71,9 @@ $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_lo
 $ unzip path_of_files
 ```
 
-https://user-images.githubusercontent.com/91216328/164944932-936fce64-9bba-45df-a3b1-02e1c4d6cfbc.mp4
+
+https://user-images.githubusercontent.com/91216328/165153874-fd982ec0-3c91-4cff-8192-e2e3b03871ef.mp4
+
 
 # Steps and functions
 ## Step 1.
@@ -183,7 +187,8 @@ $ fastqc *.fastq.gz -o path_of_output_folder
 <img width="533" alt="FASTQC_trimmed_Terminal_output" src="https://user-images.githubusercontent.com/91216328/164949992-e4a3b13b-82d4-40bc-b423-522693de91e7.png">
 
 Output `.html` file **[Sample output file](sample_data/Trimmed_quality_check_output/4040-KH-14.4040-KH-14_0_filtered_R1_val_1_fastqc.html)** showed better quality scores after trimmed and it can be downloaded from ASC to local and viewe in a web browser. 
-![](README_images/trimmed_quality_check_output_html_file.png)
+![Screen Shot 2022-04-21 at 10 52 28 PM](https://user-images.githubusercontent.com/91216328/164999326-d826a88f-b250-4890-b051-20bc107001be.png)
+
 ## Step 4.
 ### Index-genome
 | [Description](#description-3) | [Usage](#usage-3) | [Input Format](#input-format-3) | [Output Format](#output-format-3) |
@@ -222,7 +227,7 @@ $ gzip -d GRCm39.genome.fa.gz
 |---|---|---|---|
 
 ### Description
-`Aligning_Reads` used for aligning FASTQ files to the indexed genome. it repuried `tophat` module and `bowtie2`
+`Aligning_Reads` used for aligning FASTQ files to the indexed genome. It requries `tophat` module and `bowtie2`
 ### Usage
 
 - Before run `Aligning_Reads`, unzip trimmed reads if needed to make sure input files are **.fq** format.
