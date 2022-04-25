@@ -14,6 +14,10 @@ You will need the following in order to run the script:
 FUTURE STEPS:
 After finishing this script, the data is ready to be used to identify differentially expressed genes through programs like DEseq
 
+## Citing
+RNA_sequencing2 can be cited as:
+
+Hoek KL, Greer MJ, McClanahan KG, Nazmi A, Piazuelo MB, Singh K, Wilson KT, Olivares-Villagómez D. Granzyme B prevents aberrant IL-17 production and intestinal pathogenicity in CD4+ T cells. Mucosal Immunol. 2021 Sep;14(5):1088-1099. doi: 10.1038/s41385-021-00427-1. Epub 2021 Jun 28. PMID: 34183776; PMCID: PMC8380717.https://pubmed.ncbi.nlm.nih.gov/34183776/
 
 ## Project Objectives
 
