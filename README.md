@@ -70,7 +70,10 @@ $ scp  your_asc_account@dmc.asc.edu:~/path_of_the_files_in_ASC path_of_dir_in_lo
 $ unzip path_of_files
 ```
 
-https://user-images.githubusercontent.com/91216328/164944932-936fce64-9bba-45df-a3b1-02e1c4d6cfbc.mp4
+
+https://user-images.githubusercontent.com/91216328/165153297-62dfa077-cda1-4077-8b52-afe0598bcfbd.mp4
+
+
 
 # Steps and functions
 ## Step 1.
