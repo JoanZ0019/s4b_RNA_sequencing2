@@ -55,7 +55,8 @@ $ scp your_local_path_of_files your_asc_account@dmc.asc.edu:~/path_of_the_direct
 ```
 - Once you login, **submit** jobs to ASC to run your scripts
 
-https://user-images.githubusercontent.com/91216328/164949011-7358eb93-f115-46cb-a49a-2960e5687bc9.mp4
+https://user-images.githubusercontent.com/91216328/165161773-68bc487c-bf31-4309-837e-9c2acddfd834.mp4
+
 
 ```
 $ chmod +x my_scripts
